@@ -1,0 +1,494 @@
+/* =========================
+   Reset / Base
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #112;
+  background: var(--bg);
+}
+h1, h2, h3, .logo {
+  font-family: var(--font-secondary);
+}
+strong, b { font-weight: 600; }
+p, a, li { font-weight: 400; }
+
+
+a {
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-green);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--color-green);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   Variables (fácil de personalizar)
+   ========================= */
+
+:root{
+  --bg: #D6EBD6;
+  --text: #07110b;
+  --color-bg: #1F7A3A;      /* header background */
+  --color-green: #0B6A2F;   /* enlaces/acciones */
+  --accent-contrast: #fff;
+  --max-width: 1200px;
+  --header-height: 100px;
+  --gap: 1rem;
+  --font-primary:"Quicksand", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-secondary:"Amatic SC", "Comic Sans MS", cursive;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+  display: flex;
+  align-items: center;               /* centra verticalmente logo y nav */
+  justify-content:center ;
+  width: min(1899,99px, 100%);
+  height: var(--header-height);
+  padding: 0 0rem;
+  margin: .01rem auto;
+  background: var(--color-bg);
+  color: var(--accent-contrast);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 14px;
+  box-sizing: border-box;
+  position:sticky;
+  top: 0rem;
+  z-index:999;
+}
+
+/* Logo: ocupa toda la altura del header sin romper */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  height: 100%;
+}
+
+/* Imagen del logo: no sobrepasa el header */
+.logo img {
+  display: block;
+  height: calc(var(--header-height) - 10px);
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Texto SEO junto al logo (puedes ocultarlo visualmente si es sólo para accesibilidad) */
+
+
+/* NAV */
+.barNav {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  background: var(--color-bg);
+  border-radius:10px;
+  padding:2px;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.menu li { margin: 0; padding: 0; }
+
+.menu li a {
+  display: inline-block;
+  padding: 0.4rem 0.65rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--accent-contrast);
+  background: transparent;
+  transition: all 160ms ease;
+}
+
+.menu li a:hover {
+  background-color: rgba(255,255,255,0.08);
+  transform: translateY(-1px);
+}
+
+.menu li a.enlaceActivo {
+  background-color: rgba(255,255,255,0.18);
+  color: var(--accent-contrast);
+}
+
+/* =========================
+   MAIN / SECCIONES
+   ========================= */
+main {
+  padding: 2rem 1rem;
+  background: transparent;
+}
+
+.miniEnlaces {
+  max-width: var(--max-width);
+  margin: 0 auto 1.25rem auto;
+  padding: 1rem;
+  background: --color-green; /* ligera tarjeta sobre fondo */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.miniEnlaces h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.seccionProductos{
+  width: 100%;
+  margin: 0 auto 1.25rem auto;
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 80px rgba(0,0,0,0.0);
+  box-sizing: border-box;
+}
+.galeriaProductos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* cuadrícula adaptable */
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+  box-sizing: border-box;
+
+}
+.imagenProductos{
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+.producto{
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+}
+
+/* Tipos de texto */
+a.enlaceActivo { color: var(--color-green); font-weight: 700; }
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  background: var(--color-bg);
+  color: #f0fff0;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+footer section {
+  flex: 0 0 250px; /* cada sección ocupa mínimo 250px y se adapta */
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+
+footer a { color: #bfe6c6; text-decoration: none ; }
+
+footer a,
+footer a:visited {
+  color: var(--accent-contrast, #fff);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   UTILIDADES
+   ========================= */
+.sr-only { /* útil para ocultar visualmente texto accesible */
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* =========================
+   RESPONSIVE: ajustes móviles
+   ========================= */
+@media (max-width: 800px) {
+  header {
+    padding: 0 0.75rem;
+    height: 84px;
+  }
+
+  .logo img {
+    height: calc(84px - 8px);
+  }
+
+  .texto-seo { display: none; } /* opcional quitar texto en pantallas pequeñas */
+
+  .menu {
+    gap: 0.4rem;
+  }
+
+  .miniEnlaces {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 0.5rem;
+    padding: 0.6rem;
+  }
+
+  .logo { height: auto; }
+
+  .logo img { height: 48px; }
+
+  .barNav { width: 100%; justify-content: center; }
+}
+
+/* =========================
+   Sugerencias para modificar
+   =========================
+   - Cambia variables en :root para paleta y tamaños.
+   - Para mover logo a centro usa header { justify-content: center; }.
+   - Para logo izquierda y nav derecha ya está space-between.
+   - Para un header fijo añade position: fixed; top:0; left:0; right:0.
+*/
+
+/*========PRESUPUESTO========*/
+.contenedor {
+  background: var(--bg);
+  border: 2px solid var(--color-bg);         /* línea fina tipo papel */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* sombra ligera */
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 2rem auto;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--color-green, #0b6a2f);
+}
+
+.lead {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+form .full {
+  grid-column: 1 / -1;
+}
+
+form .policy-row {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+
+}
+form .policy-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--color-green, #0b6a2f); /* color personalizado si quieres */
+}
+
+form .policy-row label {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-green, #0b6a2f);
+  color: var(--accent-contrast, #fff);
+}
+
+.btn-secondary {
+  background-color: vac(--color-green);
+  color: #112;
+}
+
+/*=======================CONTACTO===========================================*/
+.contenedorContacto {
+  background: var(--bg);
+  border: 2px solid var(--color-bg);         /* línea fina tipo papel */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* sombra ligera */
+  border-radius: 10px;
+  padding: 0.1rem;
+  max-width: 700px;
+  width: 90%;
+  box-sizing: border-box;
+  margin: 2rem auto;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 360px;
+gap:1rem;
+align-items:start;
+}
+.mapaFull img{
+min-height:260px;
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:10px;
+border:2px solid var(--color-green);
+}
+.datos-empresa-card{
+padding:1rem;
+}
+.datos-empersa-card h2{
+margin-top:0;
+}
+.datos-empresa-card address{
+font-style:normal;
+line-height:1.5;
+}
+.datos-empresa-card p{
+margin:0.5rem 0;
+}
+.datos-empersa-card h3{
+margin-top:10rem;
+margin-bottom:0.25rem;
+}
+
+.titulo3{
+margin-top:0.5rem;
+margin-bottom:0.25rem;
+}
+.datos-empresa-card ul{
+margin:0;
+padding-left:1.1rem;
+line-height:1.5;
+}
+.parrafoTitutlo3{
+margin-top:1rem;
+font-size:0.95rem;
+color:#345d3a;
+}
+
+.cajaBottom{
+margin-top:1rem;
+}
+.formularioContacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cajaFormularioContacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}

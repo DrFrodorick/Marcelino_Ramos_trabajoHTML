@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdura hidropónica · FAN</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico?v=2">
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Fres and natural">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+         <h1 class="logo">
+            <a href="index.html">
+                <img src="./assets/images/Logo/Logo.png" alt="FAN.COM - Verduras frescas">
+            </a>
+            <span class="texto-seo"><a href="index.html">Fresh And Natural</a></span>
+        </h1>
+
+
+        <nav class="barNav">
+            <input type="checkbox" id="check-menu" class="check-menu">
+            <ul class="barNav-links">
+                <li><a href="#" class="enlaceActivo bordeSuperior">Inicio</a></li>
+                <li><a href="views/producto.html" class="enlace">Productos</a></li>
+                <li><a href="views/presupuesto.html" class="enlace">Presupuesto</a></li>
+                <li><a href="views/contacto.html" class="enlace bordeInferior">Contacto</a></li>
+            </ul>
+            <label for="check-menu" class="label-check">
+                <img src="./assets/menu-hamburguesa/menu-svgrepo-com.svg" alt="menu hamburguesa" height="60" width="60">
+            </label>
+        </nav>
+    </header>
+    <main>
+        <div class="carrusel">
+            <input type="radio" name="carrusel" id="slide1" checked>
+            <input type="radio" name="carrusel" id="slide2">
+            <input type="radio" name="carrusel" id="slide3">
+            <div class="carrusel-contenido">
+                <div class="carrusel-caja">
+                    <div class="carrusel-elemento">
+                        <img src="./assets/images/carrusel/portada1.jpg" alt="Foto de planta sobre fondo negro color pizarra" width="1920" height="1080">
+                        <p class="texto-tarjeta1">Nacidos por la necesidad de un mercado eco-sostenible y enfocados 
+                                en una producción por y para un producto kilómetro 0</p>
+                    </div>
+                    <div class="carrusel-elemento">
+                        <img src="./assets/images/carrusel/mesa.jpg" alt="Foto de un manojo de perejil sobre una mesa de madera" width="1920" height="1080">
+                        <p class="texto-tarjeta2">Agrupamos gran variedad de productos para ofrecer la mejor calidad</p>
+                    </div>
+                    <div class="carrusel-elemento">
+                        <img src="./assets/images/carrusel/gato-de-agua.jpg" alt="Foto hiperrealista sobre una gota de agua en la punta de una hoja de hierba" width="1920" height="1080">
+                        <p class="texto-tarjeta3">Valoramos el agua como el recurso indispensable que es para la vida por eso en nuestros
+                                centros de cultivo tienemos la mejor tecnología dirigida exclusivamente tanto a la reutilización del agua de lluvia como
+                                a volver a introducir al circuito de riego la que usamos en nuestros cultivos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carrusel-controles">
+                <label class="arrow prev prev-2" for="slide1">&#10094;</label>
+                <label class="arrow prev prev-3" for="slide2">&#10094;</label>
+
+                <label class="arrow next next-1" for="slide2">&#10095;</label>
+                <label class="arrow next next-2" for="slide3">&#10095;</label>
+            </div>
+        </div>
+
+        <section class="miniEnlaces">
+            <div class="cajaProductos"> 
+                <div class="cajaTexto">                
+                    <h2>¿Cuales son nuestros productos?</h2>
+                    <p><strong><a href="views/producto.html#hojasVerdes" class="enlaceActivo"> Hojas verdes</a></strong> tipicas en nuestra gastronomía tanto en la elaboración de ensaladas como en acompañamientos en
+                        platos principales como son la lechuga batavia, lechuga escarola, canónimo, cogollos de lechuga romana, endibia, hoja de roble, lechuga de hoja roja, iceberg, lechuga romana, trocadero, radicchio
+                        o rúcula.
+                        <br><strong><a href="views/producto.html#verduraAsiatica" class="enlaceActivo">Verduras asiáticasa</a></strong> perfectas para la elaboración de platos orientales con productos originales como son
+                        choi sum, pak choi, mini pak choi, kai lan, kan choi, tong ho viet, kou choi, tong ho, bai cai o heung moll.
+                        <br><strong><a href="views/producto.html#hierbaAromatica" class="enlaceActivo">Hierbas aromáticas y microgreens</a></strong> perfecto para hoteles, coctelerías y delivery gourmet. Contamos con
+                        una amplia variedad como son cebollino, cilantro, mostaza, perejil, menta o labahaca.
+                        <br><strong><a href="views/producto.html#frutaPeque" class="enlaceActivo">Frutos pequeños</a></strong> con una amplia gama de productos para el acompañamiento de nuestros platos
+                        o postres como son el tomate, tomate cherry, fresas, frambuesas o arándanos.
+                    </p>
+                </div>
+                <div class="cajaImagen">
+                    <img class="imgProductos" src="./assets/images/fondos/pimiento-amarillo.jpg" alt="Pimiento amarillo cayendo sobre superficie de agua">
+                </div>
+            </div>
+        </section>
+        <div class="recetas">
+            <h2 class="recetas-titulo">Recetas de la semana</h2>
+            <section class="receta-1">
+                <div class="receta">
+                    <img src="./assets/images/recetas/plato-1.PNG" alt="Nombre del plato 1" width="250" height="200">
+                    <h3>Ensalada de canónigos</h3>
+                    <p>Ensalada rápida y sencilla para esos días que no tenemos mucho tiempo para cocinar y queremos seguir manteniendo la línea.</p>
+                    <details>
+                        <summary>Ingredientes</summary>
+                        <ul>
+                            <li>150g de canónigos</li>
+                            <li>3 o 4 lonchas de salmón aumado</li>
+                            <li>1 cebolla</li>
+                            <li>1 lata de aceitunas negras</li>
+                            <li>1 lata de maíz en grano</li>
+                            <li>100ml de aceite de oliva</li>
+                            <li>50ml de vinagre</li>
+                            <li>Sal al gusto</li>
+                        </ul>
+                    </details>
+                </div>
+            </section> 
+            <section class="receta-2">           
+                <div class="receta">
+                    <img src="./assets/images/recetas/plato-2.PNG" alt="Nombre del plato 2" width="250" height="200">
+                    <h3>Ensalada de verduras chinas</h3>
+                    <p>Ensalada de especialidad oriental realizada con verduras orientales de nuestra propia huerta frescas y saludables.</p>
+                    <details >
+                        <summary>Ingredientes</summary>
+                        <ul>
+                            <li>1 bok choy</li>
+                            <li>1 pak choy</li>
+                            <li>1 zanahoria rayada</li>
+                            <li>50g cacahuete pelado</li>
+                            <li>1 pepino verde</li>
+                            <li>1 cucharada de semillas de mostaza</li>
+                            <li>100ml de aceite de oliva</li>
+                            <li>30ml de aceite de sésamo</li>
+                            <li>Sal al gusto</li>
+                        </ul>
+                    </details>
+                </div>
+            </section>
+            <section class="receta-3">            
+                <div class="receta">
+                    <img src="./assets/images/recetas/receta-3.jpg" alt="Nombre del plato 3" width="250" height="200">
+                    <h3>Ensalada de tomate, cebolla y ventresca</h3>
+                    <p>Ensalada de variedad mediterránea, rápida y sencilla de hacer que nos recuerda al verano.</p>
+                    <details>
+                        <summary>Ingredientes</summary>
+                        <ul>
+                            <li>150g de tomates cherry</li>
+                            <li>1 cebolla</li>
+                            <li>300g de ventresca en conserva de aceite</li>
+                            <li>1 limón</li>
+                            <li>1 cucharada pequeña de semilla de mostaza</li>
+                            <li>1 cucharada de oliva virgen extra</li>
+                            <li>Sal al gusto</li>
+                        </ul>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+            <div id="redes-sociales">
+                <p>Síguenos en nuestras redes:</p>
+                <a href="https://facebook.com" target="_blank"><img src="./assets/images/inconos-rrss/facebook-svgrepo-com.svg" alt="Facebook"></a> |
+                <a href="https://twitter.com" target="_blank"><img src="./assets/images/inconos-rrss/twitter-svgrepo-com.svg" alt="Twitter"></a> |
+                <a href="https://instagram.com" target="_blank"><img src="./assets/images/inconos-rrss/instagram-svgrepo-com.svg" alt="Instagram"></a>
+            </div>
+
+            <div id="direccion">
+                <p>Dirección: Poligo Industrial Tebongo, Cangas del Narcea, Asturias </p>
+            </div>
+
+            <div id="aviso-legal">
+                <p><a href="views/aviso-legal.html">Aviso legal</a></p>
+            </div>
+    </footer>
+</body>
+</html>

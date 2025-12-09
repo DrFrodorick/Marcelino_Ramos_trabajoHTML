@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto · FAN</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico?v=2">
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Hidro">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+         <h1 class="logo">
+            <a href="../index.html">
+                <img src="../assets/images/Logo/Logo.png" alt="FAN.COM - Verduras frescas">
+            </a>
+            <span class="texto-seo"><a href="../index.html">Fresh And Natural</a></span>
+        </h1>
+
+
+        <nav class="barNav">
+            <input type="checkbox" id="check-menu" class="check-menu">
+            <ul class="barNav-links">
+                <li><a href="../index.html" class="enlace bordeSuperior">Inicio</a></li>
+                <li><a href="producto.html" class="enlace">Productos</a></li>
+                <li><a href="#" class="enlaceActivo">Presupuesto</a></li>
+                <li><a href="contacto.html" class="enlace bordeInferior">Contacto</a></li>
+            </ul>
+            <label for="check-menu" class="label-check">
+                <img src="../assets/menu-hamburguesa/menu-svgrepo-com.svg" alt="menu hamburguesa" height="60" width="60">
+            </label>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor">
+            <section class="hoja" >
+                <h2>Solicita tu presupuesto</h2>
+                <p class="textoPresupuesto1">Rellena el formulario con tus datos y la información que necesites. Todos los campos son obligatorios y debes aceptar la política de privacidad para enviar el formulario.</p>
+                <form action="#" method="post" >
+                    <div>
+                        <div class="hint">Introduce tu nombre completo.</div>
+                        <label for="nombre">Nombre completo</label>
+                        <input id="nombre" name="nombre" type="text" placeholder="Ej. Ana Pérez" required
+                                minlength="2" maxlength="80" autocomplete="name">
+                    </div>
+                    <div>
+                        <div class="hint">Tu correo electrónico.</div>
+                        <label for="email">Correo electrónico</label>
+                        <input id="email" name="email" type="email" placeholder="ejemplo@correo.com" required
+                                maxlength="128" autocomplete="email">
+                    </div>
+                    <div>
+                        <div class="hint">Incluye prefijo si procede (+34). Solo números, espacios o guiones.</div>
+                        <label for="telefono">Teléfono</label>
+                        <input id="telefono" name="telefono" type="tel" placeholder="+34 600 000 000" required
+                                pattern="^\+?[0-9\s\-]{9,15}$" maxlength="20" autocomplete="tel">
+                    </div>
+                    <div class="full">
+                        <div class="cajaTextoPresupuesto">Describe lo más preciso posible lo que necesitas (mín. 10 caracteres).</div>
+                        <label for="mensaje">Solicite más información</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Dinos qué necesitas: productos, cantidades, plazos..." required minlength="10" maxlength="3000"></textarea>
+                    </div>
+                    <div class="lineaPoliticaPrivacidad">
+                        <input id="acepto" name="acepto" type="checkbox" required>
+                        <label for="acepto" style="margin:0; font-weight:500;">
+                                He leído y acepto la <a href="aviso-legal.html" class="enlace" >Política de privacidad</a>.
+                        </label>
+                    </div>
+                    <div class="actions">
+                        <button type="reset" class="btn btn-secondary" aria-label="Limpiar formulario">Limpiar</button>
+                        <button type="submit" class="btn btn-primary" aria-label="Enviar solicitud de presupuesto">Enviar solicitud</button>
+                    </div> 
+                </form>   
+            </section>
+        </div>
+    </main>
+    <footer>
+            <div id="redes-sociales">
+                <p>Síguenos en nuestras redes:</p>
+                <a href="https://facebook.com" target="_blank"><img src="../assets/images/inconos-rrss/facebook-svgrepo-com.svg" alt="Facebook"></a> |
+                <a href="https://twitter.com" target="_blank"><img src="../assets/images/inconos-rrss/twitter-svgrepo-com.svg" alt="Twitter"></a> |
+                <a href="https://instagram.com" target="_blank"><img src="../assets/images/inconos-rrss/instagram-svgrepo-com.svg" alt="Instagram"></a>
+            </div>
+
+            <div id="direccion">
+                <p>Dirección: Poligo Industrial Tebongo, Cangas del Narcea, Asturias </p>
+            </div>
+
+            <div id="aviso-legal">
+                <p><a href="../views/aviso-legal.html">Aviso legal</a></p>
+            </div>
+    </footer>
+</body>
+</html>
+
