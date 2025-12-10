@@ -20,7 +20,7 @@
     <header>
          <h1 class="logo">
             <a href="../index.html">
-                <img src="../assets/images/Logo/Logo.png" alt="FAN.COM - Verduras frescas">
+                <img src="../assets/images/Logo/Logo.png" alt="FAN.COM - Verduras frescas" width="400" height="400">
             </a>
             <span class="texto-seo"><a href="../index.html">Fresh And Natural</a></span>
         </h1>
@@ -49,13 +49,13 @@
                         <div class="hint">Introduce tu nombre completo.</div>
                         <label for="nombre">Nombre completo</label>
                         <input id="nombre" name="nombre" type="text" placeholder="Ej. Ana Pérez" required
-                                minlength="2" maxlength="80" autocomplete="name">
+                                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s\-']+$" minlength="2" maxlength="80" autocomplete="name">
                     </div>
                     <div>
                         <div class="hint">Tu correo electrónico.</div>
                         <label for="email">Correo electrónico</label>
                         <input id="email" name="email" type="email" placeholder="ejemplo@correo.com" required
-                                maxlength="128" autocomplete="email">
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" maxlength="128" autocomplete="email">
                     </div>
                     <div>
                         <div class="hint">Incluye prefijo si procede (+34). Solo números, espacios o guiones.</div>
@@ -66,7 +66,8 @@
                     <div class="full">
                         <div class="cajaTextoPresupuesto">Describe lo más preciso posible lo que necesitas (mín. 10 caracteres).</div>
                         <label for="mensaje">Solicite más información</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Dinos qué necesitas: productos, cantidades, plazos..." required minlength="10" maxlength="3000"></textarea>
+                        <textarea id="mensaje" name="mensaje" placeholder="Dinos qué necesitas: productos, cantidades, plazos..." required
+                                   pattern="^[\s\S]{10,3000}$" minlength="10" maxlength="3000"></textarea>
                     </div>
                     <div class="lineaPoliticaPrivacidad">
                         <input id="acepto" name="acepto" type="checkbox" required>
@@ -85,9 +86,9 @@
     <footer>
             <div id="redes-sociales">
                 <p>Síguenos en nuestras redes:</p>
-                <a href="https://facebook.com" target="_blank"><img src="../assets/images/inconos-rrss/facebook-svgrepo-com.svg" alt="Facebook"></a> |
-                <a href="https://twitter.com" target="_blank"><img src="../assets/images/inconos-rrss/twitter-svgrepo-com.svg" alt="Twitter"></a> |
-                <a href="https://instagram.com" target="_blank"><img src="../assets/images/inconos-rrss/instagram-svgrepo-com.svg" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank"><img src="../assets/images/inconos-rrss/facebook-svgrepo-com.svg" alt="Facebook" width="25" height="25"></a> |
+                <a href="https://twitter.com" target="_blank"><img src="../assets/images/inconos-rrss/twitter-svgrepo-com.svg" alt="Twitter" width="25" height="25"></a> |
+                <a href="https://instagram.com" target="_blank"><img src="../assets/images/inconos-rrss/instagram-svgrepo-com.svg" alt="Instagram" width="25" height="25"></a>
             </div>
 
             <div id="direccion">

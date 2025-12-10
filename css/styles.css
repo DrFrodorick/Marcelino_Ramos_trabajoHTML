@@ -71,7 +71,11 @@ a:active {
   color: var(--color-contraste);
   text-decoration: none;
 }
-
+/* Modificación de texto <strong> por <span> */
+span{
+  font-weight: bold;
+  color: var(--color-boton);
+}
 /* ============================================
    3. HEADER Y NAVEGACIÓN
    ============================================ */
